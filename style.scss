@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-color: hsl(235, 16%, 14%);
+    background-image: url("/images/bg-stars.svg") , url("./images/pattern-hills.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    min-height: 100vh;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    min-height: 100vh;
+
+    h1 {
+        margin-top: 80px;
+        color: #fff;
+        letter-spacing: 6px;
+    }
+
+    .time-grp {
+        display: flex;
+        justify-content: space-between;
+        gap: 45px;
+        margin-top: 25px;
+    }
+
+    .time-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .line {
+            width: 100%;
+            height: 1px;
+            color: #fff;
+            position: absolute;
+            background: #42424b;
+            top: 50%;
+            transform: translateY(-19px);
+        }
+
+        .circle {
+            height: 5px;
+            background-color: #141414;
+            width: 5px;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-21px);
+}
+
+        .left {
+            left: -3px;
+        }
+
+        .right{
+            right: -3px;
+        }
+
+        .time-label {
+            text-transform: uppercase;
+            color: hsl(237, 18%, 59%);
+            margin-top: 25px;
+            letter-spacing: 6px;
+            font-size: .6rem;
+            text-align: center;
+        }
+    }
+
+    .time-value {
+        padding: 10px;
+        max-height: 80px;
+        min-width: 92px;
+        text-align: center;
+        background: hsl(236, 21%, 26%);
+        color: hsl(345, 95%, 68%);
+        font-size: 2.5rem;
+        font-weight: 700;
+        border-radius: 8px;
+        box-shadow: 1px 6px 2px 1px #0a0b18;
+}
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 160px;
+        margin-bottom: 15px;
+        padding-top: 60px ;
+    
+        a &:hover {
+            fill: hsl(345, 95%, 68%);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .wrapper {
+
+        h1 {
+            text-align: center;
+        }
+        .time-grp {
+            gap: 22px;
+
+            .time-value {
+                font-size: 2rem;
+                min-width: 32px;
+            }
+
+            .time-label {
+                letter-spacing: 1px;
+            }
+        }
+
+
+    }
+}
