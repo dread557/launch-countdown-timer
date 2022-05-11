@@ -137,6 +137,7 @@ a .wrapper .footer:hover {
 @media screen and (max-width: 700px) {
   .wrapper h1 {
     text-align: center;
+    margin-top: 0;
   }
   .wrapper .time-grp {
     gap: 22px;
